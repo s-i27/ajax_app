@@ -8,7 +8,7 @@ class PostsController < ApplicationController
   # end
 
   def create 
-    Post.create(content:params[:content] , checked: false)
+    post = Post.create(content: params[:content], checked: false)
     # redirect_to action: :index
     render json:{post: post}
   end
